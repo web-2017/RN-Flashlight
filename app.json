@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "prayertime",
-    "slug": "prayertime",
+    "name": "flashlight",
+    "slug": "flashlight",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "prayertime",
+    "scheme": "flashlight",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -20,7 +20,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mariocompany.prayertime",
+      "bundleIdentifier": "com.mariocompany.flashlight",
       "requireFullScreen": true,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-3314508795958599~7255900575"
@@ -43,7 +43,7 @@
         "ACCESS_FINE_LOCATION",
         "FOREGROUND_SERVICE"
       ],
-      "package": "com.mariocompany.prayertime"
+      "package": "com.mariocompany.flashlight"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"

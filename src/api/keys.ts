@@ -1,2 +1,5 @@
-// http://api.aladhan.com/v1/calendarByCity?city=London&country=United%20Kingdom
-export const apiUrlByAddress: string = 'http://api.aladhan.com/v1/calendarByCity'
+/**
+ * @description allAppsUrl - ссылка на наши приложения
+ * @returns {string} - строка url
+ * */
+export const allAppsUrl: string = 'https://play.google.com/store/apps/developer?id=Mario+Magomedov'

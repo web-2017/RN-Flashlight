@@ -60,10 +60,13 @@ const TabOneScreen = ()  => {
                 }
               }
           />
+          
           <View style={styles.iconsContainer}>
+            <Text style={styles.title}>{i18n.t(Constants.FlashMode.torch === isTorchOn.flashMode ? `on` : `off`)}</Text>
             <Text onPress={_toggleTorchHandler}>
               {
                 Constants.FlashMode.torch === isTorchOn.flashMode ?
+    
                     <Ionicons name="flashlight-outline" size={200} color="black" />
                     :
                     <Ionicons name="flashlight" size={200} color="black" />
@@ -85,7 +88,11 @@ const styles = StyleSheet.create({
   },
   iconsContainer: {
     flex: 1, alignSelf: "center", justifyContent: 'center',
-  }
+  },
+    title: {
+        textAlign: 'center', position: "relative", top: -20,
+        fontSize: 16
+    }
 });
 
 export default TabOneScreen
