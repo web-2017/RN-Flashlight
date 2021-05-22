@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "prayertime",
+    "slug": "prayertime",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "prayertime",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mariocompany.prayertime",
+      "requireFullScreen": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3314508795958599~7255900575"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "splash": {
+        "resizeMode": "cover"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3314508795958599~3729441302"
+      },
+      "permissions": [
+        "READ_PHONE_STATE",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE"
+      ],
+      "package": "com.mariocompany.prayertime"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    }
+  }
+}

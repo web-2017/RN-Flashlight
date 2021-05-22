@@ -1,0 +1,76 @@
+/**
+ * Learn more about createBottomTabNavigator:
+ * https://reactnavigation.org/docs/bottom-tab-navigator
+ */
+import * as React from 'react';
+
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import Colors from '../constants/Colors';
+import useColorScheme from '../hooks/useColorScheme';
+import TabOneScreen from '../screens/TabOneScreen';
+import {BottomTabParamList, TabOneParamList} from '../../types';
+import {i18n} from "../lang";
+import {Platform} from "react-native";
+
+const BottomTab = createBottomTabNavigator<BottomTabParamList>();
+
+export default function BottomTabNavigator() {
+    const colorScheme = useColorScheme();
+
+    return (
+        <BottomTab.Navigator
+            initialRouteName="TabOne"
+            tabBarOptions={{
+                activeTintColor: Colors.dark.tabIconSelectedText,
+                inactiveTintColor: Colors.dark.tabIconDefaultText,
+                activeBackgroundColor: Colors[colorScheme].tabIconSelected,
+                inactiveBackgroundColor: Colors[colorScheme].tabIconSelected,
+                style: {
+                    backgroundColor: Colors.dark.tabIconDefault,
+                    height: Platform.OS === 'ios' ? 90 : 60,
+                },
+                labelStyle: {
+                    fontSize: 14,
+                    // margin: 0,
+                    // paddingBottom: 5,
+                },
+            }}>
+            <BottomTab.Screen
+                name={i18n.t('scheduleOnDay')}
+                component={TabOneNavigator}
+                options={{
+                    tabBarVisible: false,
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-time-outline" color={color} />,
+                }}
+            />
+        </BottomTab.Navigator>
+    );
+}
+
+// You can explore the built-in icon families and icons on the web at:
+// https://icons.expo.fyi/
+function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; color: string }) {
+    return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
+}
+
+// Each tab has its own navigation stack, you can read more about this pattern here:
+// https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
+const TabOneStack = createStackNavigator<TabOneParamList>();
+
+function TabOneNavigator() {
+    return (
+        <TabOneStack.Navigator>
+            <TabOneStack.Screen
+                name="TabOneScreen"
+                component={TabOneScreen}
+                options={{
+                    headerTitle: 'Tab One Title',
+                    headerShown: false, // hide header for tab
+                }}
+            />
+        </TabOneStack.Navigator>
+    );
+}
