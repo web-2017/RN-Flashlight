@@ -14,7 +14,7 @@ export const AdMobBannerComponent = ({bannerError}: any) => {
             {/*'banner' | 'largeBanner' | 'mediumRectangle' | 'fullBanner'
             | 'leaderboard' | 'smartBannerPortrait' | 'smartBannerLandscape';*/}
             <AdMobBanner
-                bannerSize="smartBannerPortrait"
+                bannerSize="largeBanner"
                 adUnitID={adMobBannerKeys}
                 onDidFailToReceiveAdWithError={bannerError} />
         </View>

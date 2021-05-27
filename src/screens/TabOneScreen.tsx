@@ -34,8 +34,8 @@ const TabOneScreen = ()  => {
   },[])
 
 
-  const bannerError = () => {
-    console.log('bannerError')
+  const bannerError = (props: any) => {
+    // console.log('bannerError', props)
   }
   
   const _toggleTorchHandler = () => {

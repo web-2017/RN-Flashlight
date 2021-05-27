@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import useCachedResources from './src/hooks/useCachedResources';
 import useColorScheme from './src/hooks/useColorScheme';
 import Navigation from './src/navigation';
+import {i18n} from "./src/lang";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -18,13 +19,12 @@ export default function App() {
             
             if (!status) {
                 Alert.alert(
-                    'Доступ к вспышке отключен',
-                    'Нам необходимо разраешения для доступа к вспышке телефона, влючите его'
+                    `${i18n.t('errorAlertTitle')}`,
+                    `${i18n.t('errorAlertMessage')}`
                 )
             }
         })();
     }, []);
- 
 
   if (!isLoadingComplete) {
     return null;
@@ -32,7 +32,7 @@ export default function App() {
     return (
       <SafeAreaProvider>
       <Navigation colorScheme={colorScheme} />
-        <StatusBar/>
+        <StatusBar style='dark'/>
       </SafeAreaProvider>
     );
   }
