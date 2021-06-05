@@ -1,5 +1,5 @@
 export const rus = {
-    title: 'Фонарик M',
+    title: 'Фонарик Free',
     on: 'Включен',
     off: 'Выключен',
     errorAlertTitle: 'Доступ к вспышке отключен',

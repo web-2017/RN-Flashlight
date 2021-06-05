@@ -21,7 +21,3 @@ then =>
 > expo fetch:android:upload-cert
 
 > expo fetch:android:keystore
-Keystore credentials
-Keystore password: 423ec687852644cdba7a5a5b289f5a61
-Key alias:         QG1hcmlvMDI4NS9mbGFzaGxpZ2h0
-Key password:      d9e2f8894c3a41aea905160e94814235

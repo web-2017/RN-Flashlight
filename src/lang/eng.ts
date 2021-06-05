@@ -1,5 +1,5 @@
 export const eng = {
-    title: 'Flashlight M',
+    title: 'Flashlight Free',
     on: 'on',
     off: 'off',
     errorAlertTitle: 'Flash Error',
